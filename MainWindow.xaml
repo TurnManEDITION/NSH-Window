@@ -1,0 +1,65 @@
+﻿<Window x:Class="Hashed.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hashed"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Foreground="BlueViolet" Text="Programm for number systems and hashed by DOROFEEV" FontFamily="Cascadia Code" FontSize="26" Grid.ColumnSpan="6" />
+        <!--Number System-->
+        <TextBlock Padding="3" Grid.Row="1" Grid.Column="0" Foreground="Black" Text="Numbrer System:" FontStyle="Oblique" FontFamily="Cascadia Code" FontSize="37" Grid.ColumnSpan="3" />
+        <StackPanel TextBlock.FontSize="20" Margin="5" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
+            <ComboBox Name="FromNS">
+                <TextBlock Text="Bin"></TextBlock>
+                <TextBlock Text="Oct"></TextBlock>
+                <TextBlock Text="Dec"></TextBlock>
+                <TextBlock Text="Hex"></TextBlock>
+            </ComboBox>
+        </StackPanel>
+        <TextBox Name="InputNS" FontSize="20" Grid.Row="2" Grid.Column="2" Width="190" Margin="4" HorizontalAlignment="Left"/>
+        <Button TextBlock.FontSize="20" Content="Enter" Grid.Column="2" Grid.Row="2" Width="60" Margin="4" HorizontalAlignment="Right" Click="EnterNS"/>
+        <Button Content="↕" FontSize="25" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" Height="80" Width="30" Margin="4" Click="ChangeNS"/>
+        <StackPanel TextBlock.FontSize="20" Margin="5" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center">
+            <ComboBox Name="InNS">
+                <TextBlock Text="Bin"></TextBlock>
+                <TextBlock Text="Oct"></TextBlock>
+                <TextBlock Text="Dec"></TextBlock>
+                <TextBlock Text="Hex"></TextBlock>
+            </ComboBox>
+        </StackPanel>
+        <TextBox Name="OutNS" FontSize="20" Grid.Row="3" Grid.Column="2" Width="259" Margin="4" IsReadOnly="True" />
+        <TextBox Name="OutErrorNS" FontSize="20" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="4" Foreground="Red" IsReadOnly="True" Visibility="Hidden" FontStyle="Oblique" />
+        <!--Hashed-->
+        <TextBlock Padding="3" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" Foreground="Black" Text="Hashed:" FontStyle="Oblique" FontFamily="Cascadia Code" FontSize="37" />
+        <TextBox Name="InputH"  Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Margin="5" FontSize="20" />
+        <Button TextBlock.FontSize="20" Content="Enter" Grid.Column="5" Grid.Row="2" Width="67" Margin="4" HorizontalAlignment="Right" Click="EnterH" />
+        <StackPanel TextBlock.FontSize="20" Margin="5" Grid.Column="3" Grid.Row="3" VerticalAlignment="Center">
+            <ComboBox Name="ChoiceH">
+                <TextBlock Text="MD5"></TextBlock>
+                <TextBlock Text="SHA512"></TextBlock>
+                <TextBlock Text="SHA256"></TextBlock>
+                <TextBlock Text="SHA384"></TextBlock>
+            </ComboBox>
+        </StackPanel>
+        <TextBox Name="OutH"  Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" Margin="5" FontSize="20" IsReadOnly="True" />
+        <TextBox Name="OutErrorH" FontSize="20" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" Margin="4" Foreground="Red" IsReadOnly="True" Visibility="Hidden" FontStyle="Oblique" />
+    </Grid>
+</Window>
