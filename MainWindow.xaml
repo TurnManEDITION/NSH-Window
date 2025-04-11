@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hashed"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+        Title="NSH-Window" Height="450" Width="800" ResizeMode="NoResize">
 
     <Grid Margin="10">
         <Grid.RowDefinitions>
@@ -14,6 +14,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.1*"/>
@@ -46,7 +47,7 @@
             </ComboBox>
         </StackPanel>
         <TextBox Name="OutNS" FontSize="20" Grid.Row="3" Grid.Column="2" Width="259" Margin="4" IsReadOnly="True" />
-        <TextBox Name="OutErrorNS" FontSize="20" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="4" Foreground="Red" IsReadOnly="True" Visibility="Hidden" FontStyle="Oblique" />
+        <TextBox Name="OutErrorNS" FontSize="20" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="4" Foreground="Red" IsReadOnly="True" Visibility="Hidden" FontStyle="Oblique" />
         <!--Hashed-->
         <TextBlock Padding="3" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" Foreground="Black" Text="Hashed:" FontStyle="Oblique" FontFamily="Cascadia Code" FontSize="37" />
         <TextBox Name="InputH"  Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Margin="5" FontSize="20" />

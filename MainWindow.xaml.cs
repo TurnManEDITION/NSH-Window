@@ -53,6 +53,18 @@ namespace Hashed
                     {
                         temp = Convert.ToInt64(InputNS.Text, 8);
                         OutNS.Text = Convert.ToString(temp, 16);
+                    } else if (FromNS.Text == "Dec" && InNS.Text == "Bin")
+                    {
+                        temp = Convert.ToInt64(InputNS.Text, 10);
+                        OutNS.Text = Convert.ToString(temp, 2);
+                    } else if (FromNS.Text == "Dec" && InNS.Text == "Oct")
+                    {
+                        temp = Convert.ToInt64(InputNS.Text, 10);
+                        OutNS.Text = Convert.ToString(temp, 8);
+                    } else if (FromNS.Text == "Dec" && InNS.Text == "Hex")
+                    {
+                        temp = Convert.ToInt64(InputNS.Text, 10);
+                        OutNS.Text = Convert.ToString(temp, 16);
                     }
                     else if (FromNS.Text == "Hex" && InNS.Text == "Bin")
                     {
@@ -74,6 +86,7 @@ namespace Hashed
                 {
                     OutErrorNS.Visibility = Visibility.Visible;
                     OutErrorNS.Text = ex.Message;
+                    InputNS.Text = OutNS.Text = "";
                 }
             }
         }
